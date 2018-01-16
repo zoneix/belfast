@@ -26,7 +26,7 @@ Resources:
         GetEvent:
           Type: Api
           Properties:
-            Path: /hooks/:id
+            Path: /hooks
             Method: get
         PostEvent:
           Type: Api
