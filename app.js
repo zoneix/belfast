@@ -7,6 +7,15 @@ router.get('/', function(req, res) {
   });
 });
 
+router.get('/hooks/:id', function(req, res) {
+    res.send(req.params);
+});
+
+router.use(function timeLog (req, res, next) {
+    console.log('Time: ', Date.now())
+    next()
+});
+
 router.post('/', function(req, res) {
   res.send({
     "Output": "Hello World!"
