@@ -1,10 +1,17 @@
 {
-    "name": "express-HelloWorld",
-    "description": "Hello World ExpressJS WebService",
-    "version": "0.0.1",
-    "private": true,
-    "dependencies": {
-        "express": "latest",
-        "aws-serverless-express": "latest"
-    }
+	"name": "ozark-healthcare",
+	"description": "Cisco Spark SDK demo in Healthcare",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"express": "latest",
+		"aws-serverless-express": "latest",
+		"dotenv": "latest",
+		"passport": "latest",
+		"lodash": "latest",
+		"express-session": "latest",
+		"cookie-parser": "latest",
+		"morgan": "latest",
+		"passport-cisco-spark": "latest"
+	}
 }
