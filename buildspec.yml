@@ -1,6 +1,17 @@
 version: 0.2
-
+env:
+  variables:
+    EXAMPLE_JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64"
+  parameter-store:
+    CLIENTID: "SparkOAuthClientID"
+    CLIENTSECRET: "SparkOAuthClientSecret"
 phases:
+  pre_build:
+    commands:
+      - touch pre_build.file
+      - touch .env
+      - echo "CLIENTID=" $CLIENTID >> .env
+      - echo "CLIENTSEC=" $CLIENTSECRET >> .env
   build:
     commands:
       - npm install
